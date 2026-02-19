@@ -2,7 +2,7 @@ name: Bol Stock Monitor
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # elke 5 minuten
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
