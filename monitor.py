@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 # JOUW BOL.COM PRODUCTPAGINA
 URLS = [
-    "https://www.bol.com/nl/nl/p/pokemon-me02-5-ascended-heroes-elite-trainer-box/9300000256665012/",
+    "https://www.bol.com/nl/nl/p/playstation-portal-remote-player-midnight-black/9300000222945148/?cid=1771508458538-6341274984562&bltgh=ab850407-c74d-44df-971b-3ed9fbfaa4fc.themeCardCarouselSlotGroup_2_themeCardCarouselGroup.themeCardCarouselItem_0.Banner&promo=brandcampaign_100_De-kracht-van-PlayStation_2_Speel_0__",
 ]
 
 STATE_FILE = "state.json"
