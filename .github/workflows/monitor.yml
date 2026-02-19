@@ -3,7 +3,8 @@ name: Bol Stock Monitor
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "* * * * *"
+
 
 
 jobs:
