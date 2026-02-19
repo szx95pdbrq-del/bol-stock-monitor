@@ -1,4 +1,4 @@
-name: Bol Stock Monitor V2
+name: Bol Stock Monitor
 
 on:
   workflow_dispatch:
