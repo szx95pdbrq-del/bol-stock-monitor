@@ -3,7 +3,10 @@ import requests
 from bs4 import BeautifulSoup
 
 URLS = [
-    https://www.bol.com/nl/nl/p/pokemon-me02-5-ascended-heroes-elite-trainer-box/9300000256665012/?cid=1771489185856-9714159416142&Referrer=ADVNLPPceeaa9000032affa00f63ae0de681380323&utm_source=1380323&utm_medium=Affiliates&utm_campaign=CPS&utm_content=txl,
+    URLS = [
+    "https://www.bol.com/nl/nl/p/pokemon-me02-5-ascended-heroes-elite-trainer-box/9300000256665012/",
+]
+,
 ]
 
 STATE_FILE = "state.json"
