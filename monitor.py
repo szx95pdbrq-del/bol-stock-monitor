@@ -1,20 +1,22 @@
-import os, json, time
+import os
+import json
+import time
 import requests
 from bs4 import BeautifulSoup
 
+# JOUW BOL.COM PRODUCTPAGINA
 URLS = [
-    URLS = [
     "https://www.bol.com/nl/nl/p/pokemon-me02-5-ascended-heroes-elite-trainer-box/9300000256665012/",
-]
-,
 ]
 
 STATE_FILE = "state.json"
+
 TG_TOKEN = os.environ["TG_TOKEN"]
 TG_CHAT_ID = os.environ["TG_CHAT_ID"]
 
 HEADERS = {
-    "User-Agent": "StockMonitor/1.0 (personal use; low frequency)"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Safari/537.36",
+    "Accept-Language": "nl-NL,nl;q=0.9,en;q=0.8"
 }
 
 def load_state():
@@ -40,6 +42,7 @@ def fetch_html(url):
 def extract_availability_from_jsonld(html: str):
     soup = BeautifulSoup(html, "lxml")
     scripts = soup.find_all("script", attrs={"type": "application/ld+json"})
+
     for s in scripts:
         try:
             data = json.loads(s.get_text(strip=True))
@@ -88,6 +91,8 @@ def main():
 
         if prev in ["out_of_stock", None] and availability == "in_stock":
             tg_send(f"✅ OP VOORRAAD (koopbaar): {url}")
+
+        print(f"{url} → {availability}")
 
         time.sleep(2)
 
