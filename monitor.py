@@ -76,6 +76,8 @@ def extract_availability_from_jsonld(html: str):
     return None
 
 def main():
+    tg_send("✅ Test: monitor draait en Telegram werkt.")
+    return
     state = load_state()
 
     for url in URLS:
